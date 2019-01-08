@@ -22,6 +22,11 @@ public class Array {
         int num = 123456;
         code(num);
 
+        Tools.selectorSort(money[0]);
+        for (int i = 0; i <money[0].length ; i++) {
+            System.out.println(money[0][i]);
+        }
+
     }
 
     static void test(int[][] arr)
