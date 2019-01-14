@@ -1,7 +1,7 @@
 public class OOP {
     public static void main(String[] args){
         car a =  new car();
-        a.run();
+//        a.run();
 
         int[] arr = {9,23,134,12,1};
 
@@ -19,6 +19,10 @@ public class OOP {
 class car{
     String color;
     int num;
+
+    static {
+        System.out.println("static constrator");
+    }
 
     void run(){
         System.out.println(num+"..."+color);
