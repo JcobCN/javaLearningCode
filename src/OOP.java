@@ -1,8 +1,6 @@
 public class OOP {
     public static void main(String[] args){
         car a =  new car();
-//        a.run();
-
         int[] arr = {9,23,134,12,1};
 
         System.out.println( Tools.getMax(arr) );
@@ -13,6 +11,8 @@ public class OOP {
             System.out.print(arr[i]+"\t");
         }
         System.out.println();
+
+        Single s1 = Single.getInstance();
     }
 }
 
@@ -71,3 +71,32 @@ class Tools {
         arr[a1] = arr[a1] ^ arr[a2];
     }
 }
+
+//单实例
+/**
+ 这个是先初始化对象
+ 称为：俄汉式
+*/
+class Single{
+    private static Single s = new Single();
+    private Single(){};
+    public static Single getInstance(){
+        return s;
+    }
+}
+
+//单实例2
+
+/**
+ *
+ */
+class Single1{
+    private static Single1 s = null;
+    private Single1(){};
+    public static Single1 getInstance(){
+        if(s == null)
+            s = new Single1();
+        return s;
+    }
+}
+
