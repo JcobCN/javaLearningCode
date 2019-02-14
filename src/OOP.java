@@ -89,6 +89,8 @@ class Single{
 
 /**
  *
+ 这个是后初始化对象
+ 称为：懒汉式
  */
 class Single1{
     private static Single1 s = null;
