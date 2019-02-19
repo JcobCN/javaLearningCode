@@ -1,13 +1,12 @@
 package charactor;
 
 public class Hero {
-    String name; //姓名
-    float hp; //血量
-    float armor; //护甲
-    int moveSpeed; //移动速度
+    protected String name; //姓名
+    public float hp; //血量
+    public float armor; //护甲
+    public int moveSpeed; //移动速度
 
     Hero(){
-
     }
 
     Hero(String heroName, float heroHP, float heroArmor, int heroMoveSpeed){
@@ -18,5 +17,6 @@ public class Hero {
     }
 
     public static void main(String[] args){
+        Hero ez = new Hero("ez", 100.0f, 22.0f, 200);
     }
 }
