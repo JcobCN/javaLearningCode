@@ -16,7 +16,7 @@ public class Ez extends ADAPHero {
 
         magicAttack();
         physicAttack();
-        System.out.println( name + "使用Q，对" + target.name + "造成5点伤害");
+        System.out.println( name + "使用Q，对" + target.getName() + "造成5点伤害");
         return 0;
     }
 }

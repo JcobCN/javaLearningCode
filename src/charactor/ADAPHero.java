@@ -1,8 +1,12 @@
 package charactor;
 
-public class ADAPHero extends Hero implements AD,AP {
+public class ADAPHero extends Hero implements AD,AP, Mortal {
 
     public  ADAPHero(){
+    }
+
+    ADAPHero(String heroName){
+        super(heroName);
     }
 
     public ADAPHero(String heroName, float heroHP, float heroArmor, int heroMoveSpeed){
@@ -17,5 +21,10 @@ public class ADAPHero extends Hero implements AD,AP {
     @Override
     public void magicAttack(){
         System.out.println("进行魔法攻击");
+    }
+
+    @Override
+    public void die() {
+        System.out.println( getName() + "ADAPHero died");
     }
 }
