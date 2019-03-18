@@ -1,5 +1,8 @@
 package charactor;
 
 public interface Mortal {
-     public void die();
+     void die();
+     default void reserve(){
+         System.out.println("The hero is reserved");
+     }
 }

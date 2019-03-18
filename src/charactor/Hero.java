@@ -36,6 +36,20 @@ public class Hero {
         m.die();
     }
 
+    //jvm 对象回收时调用该函数
+    public void finalize(){
+        System.out.println("这个英雄正在被回收");
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if( obj instanceof Hero ){
+            Hero h = (Hero) obj;
+            return this.hp == h.hp;
+        }
+        return false;
+    }
+
     public static void main(String[] args){
         Hero ez = new Hero("ez", 100.0f, 22.0f, 200);
 
@@ -83,6 +97,13 @@ public class Hero {
         garen = jianSheng;
         garen.battleWin(); //调用的是父类，类方法s
 
+        //object 都继承自超类
         System.out.println(garen.toString());
+
+        System.out.println(garen.equals(ez));
+        System.out.println(garen == ez);
+        garen = teemo;
+        System.out.println(garen == teemo);
+        garen.getClass();//反射，之后再了解
     }
 }

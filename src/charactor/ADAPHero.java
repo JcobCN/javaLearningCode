@@ -27,4 +27,10 @@ public class ADAPHero extends Hero implements AD,AP, Mortal {
     public void die() {
         System.out.println( getName() + "ADAPHero died");
     }
+
+    //继承的 AD, AP接口中，都有attack()默认方法，需override
+    public void attack(){
+        System.out.println("inherited AD AP attack()");
+    }
+
 }
