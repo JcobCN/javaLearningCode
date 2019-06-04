@@ -8,4 +8,8 @@ public class LifePotion extends Item {
     public void buy(){
         System.out.println("购买血瓶");
     }
+
+    public String toString(){
+        return "Leftpotion";
+    }
 }
